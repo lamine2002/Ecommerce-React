@@ -16,12 +16,13 @@ function NewArrivalContainer() {
         <>
             <Grid container spacing={2}>
                 <Grid item xs={6} md={4}>
-                    <Item>xs=6 md=4</Item>
+                    <Item elevation={0}></Item>
                 </Grid>
                 <Grid item xs={6} md={8}>
-                    <Item>xs=6 md=8</Item>
+                    <Item elevation={0}></Item>
                 </Grid>
             </Grid>
         </>
     );
 }
+export default NewArrivalContainer;

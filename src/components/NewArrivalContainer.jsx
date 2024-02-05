@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import NewArrival from "./NewArrival.jsx";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -14,12 +15,14 @@ const Item = styled(Paper)(({ theme }) => ({
 function NewArrivalContainer() {
     return (
         <>
-            <Grid container spacing={2}>
-                <Grid item xs={6} md={4}>
+            <Grid container spacing={2} >
+                <Grid item xs={6} >
                     <Item elevation={0}></Item>
                 </Grid>
-                <Grid item xs={6} md={8}>
-                    <Item elevation={0}></Item>
+                <Grid item xs={6}  justifyContent={"end"}>
+                    <Item elevation={0} >
+                        <NewArrival />
+                    </Item>
                 </Grid>
             </Grid>
         </>

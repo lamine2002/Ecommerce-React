@@ -51,7 +51,7 @@ function Header() {
                                 key={page}
                                 variant="text"
                                 sx={{ color: 'inherit', fontWeight: 400, ml:7, fontSize: '1.1rem'}}
-                                href={`${page}`}
+                                href={`${page.split(" ").join("").toLowerCase()}`}
                             >
                                 {page}
                             </Button>

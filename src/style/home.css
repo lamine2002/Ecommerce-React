@@ -1,0 +1,23 @@
+.newArrivalImage{
+    border: 2px solid #64b5f6;
+    border-radius: 59% 41% 72% 28% / 53% 29% 71% 47% ;
+    background-color: #64b5f6;
+     width: 90%;
+     height: 700px;
+    /*background-image: url("../public/asset/image.jpeg");*/
+    /*je veux que l'image s'adapte parfaitement*/
+    /*background-size: 350px;*/
+    /*je veux que l'image soit centrée*/
+    /*background-position: center;*/
+    /*je veux que l'image ne se répète pas*/
+    /*background-repeat: no-repeat;*/
+
+
+}
+
+.newArrivalImageView{
+    width: 70%;
+    margin-top: 20%;
+    background: none;
+
+}

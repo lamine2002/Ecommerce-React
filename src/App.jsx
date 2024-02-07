@@ -16,7 +16,7 @@ function App() {
             <CssBaseline />
             <Header />
             <NewArrivalContainer />
-            <Images />
+            {/*<Images />*/}
         </ThemeProvider>
     </>
   )

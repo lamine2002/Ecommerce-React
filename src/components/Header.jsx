@@ -13,6 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import {useState} from "react";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import MenuForSmallScreen from "./MenuForSmallScreen.jsx";
+import Badge from '@mui/material/Badge';
 
 
 const pages = ['home', 'Products', 'About Us'];
@@ -24,7 +27,7 @@ function Header() {
         <AppBar position="static" sx={{backgroundColor: 'white', color: '#64b5f6'}} elevation={0}>
             <Container maxWidth="xl" >
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <AdbIcon sx={{ mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -32,11 +35,8 @@ function Header() {
                         href="#app-bar-with-responsive-menu"
                         sx={{
                             mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            fontSize: '2rem',
+                            letterSpacing: '.1rem',
+                            fontSize: '1.5rem',
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
@@ -46,6 +46,7 @@ function Header() {
 
                     {/* Modification du style de la boîte contenant les boutons */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} ml={30}>
+                        {/*// xs: 'none' pour cacher les boutons sur les petits écrans, md: 'flex' pour afficher les boutons sur les écrans moyens, ml={30} pour ajouter une marge à gauche, flexGrow: 1 pour que la boîte s'étende sur toute la largeur disponible*/}
                         {pages.map((page) => (
                             <Button
                                 key={page}
@@ -56,6 +57,19 @@ function Header() {
                                 {page}
                             </Button>
                         ))}
+                    </Box>
+
+                    <Tooltip title="Shopping Cart" arrow sx={{ ml: 'auto' }}>
+                        <IconButton size="large" edge="end" color="inherit" aria-label="menu">
+                            <Badge badgeContent={2} color="info" >
+                                <ShoppingCartIcon sx={{ fontSize: '2rem' }}/>
+                            </Badge>
+                        </IconButton>
+                    </Tooltip>
+
+                    {/*// pour les petits écrans creer un drawer*/}
+                    <Box sx={{ display: { xs: 'flex', md: 'none' }, }}>
+                        <MenuForSmallScreen />
                     </Box>
                 </Toolbar>
 

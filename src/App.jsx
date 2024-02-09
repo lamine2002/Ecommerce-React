@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NewArrivalContainer from "./components/NewArrivalContainer.jsx";
 import Images from "./components/Images.jsx";
+import ImageDiaporama from "./components/ImageDiaporama.jsx";
 
 
 const defaultTheme = createTheme();
@@ -15,6 +16,7 @@ function App() {
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
             <Header />
+            {/*<ImageDiaporama />*/}
             <NewArrivalContainer />
             {/*<Images />*/}
         </ThemeProvider>

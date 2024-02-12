@@ -7,6 +7,7 @@ import Images from "./components/Images.jsx";
 import ImageDiaporama from "./components/ImageDiaporama.jsx";
 
 
+
 const defaultTheme = createTheme();
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
             <Header />
-            {/*<ImageDiaporama />*/}
+            <ImageDiaporama />
             <NewArrivalContainer />
             {/*<Images />*/}
         </ThemeProvider>

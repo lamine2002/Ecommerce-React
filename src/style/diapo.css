@@ -1,0 +1,15 @@
+div.scroll-container {
+    background-color: #fff;
+    overflow-x: auto;
+    overflow-y: hidden ;
+    white-space: nowrap;
+    margin: 2em 3em;
+}
+
+div.scroll-container img {
+    padding-right: 0.7em;
+    height: 40em;
+    width: 30em;
+}
+
+

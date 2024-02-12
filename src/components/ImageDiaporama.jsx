@@ -1,69 +1,47 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@mui/material/styles';
-import { Box, Slider } from '@mui/material';
-import Typography from "@mui/material/Typography";
+import React from 'react';
+import '../style/diapo.css';
 
-const useStyles = makeStyles({
-    root: {
-        width: '100%',
-        height: '500px',
-        overflowX: 'auto',
+const images = [
+    {
+        src: '../public/asset/diaporama/imageSlide1.png',
+        alt: 'Cadeaux tendance',
+        description: 'Cadeaux tendance',
     },
-    image: {
-        width: '500px',
-        height: '500px',
-        objectFit: 'cover',
+    {
+        src: '../public/asset/diaporama/imageSlide2.png',
+        alt: 'Nike V2K Run',
+        description: 'Nike V2K Run'
     },
-    slider: {
-        width: '100%',
+    {
+        src: '../public/asset/diaporama/imageSlide3.png',
+        alt: 'Les nouveautés',
+        description: 'Les nouveautés'
     },
-});
-
-const ImageDiaporama = () => {
-    const classes = useStyles();
-
-    const [images, setImages] = useState([
-        {
-            url: '../public/asset/diaporama/imageSlide1.png',
-        },
-        {
-            url: 'https://images.unsplash.com/photo-1503023343279-39746739f571?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fHxMTYyNTc1ODc1MA&auto=format&fit=crop&w=1000&q=80',
-        },
-        {
-            url: 'https://images.unsplash.com/photo-1497215728959-453237771f97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fHxMTYyNTc1ODc1MA&auto=format&fit=crop&w=1000&q=80',
-        },
-    ]);
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const handleSliderChange = (event, value) => {
-        setCurrentIndex(value);
-    };
+    {
+        src: '../public/asset/diaporama/imageSlide4.png',
+        alt: 'Meilleures ventes',
+        description: 'Meilleures ventes'
+    },
+    {
+        src: '../public/asset/diaporama/imageSlide5.png',
+        alt: 'Collection d\'hiver',
+        description: 'Collection d\'hiver'
+    },
+];
+function ImageDiaporama() {
+    // code liste d'images avec scroll
 
     return (
-        <Box className={classes.root}>
-            <Box>
-                {images.map((image, index) => (
-                    <img
-                        key={index}
-                        src={image.url}
-                        alt={`Image ${index + 1}`} // Utilisation d'un texte alternatif par défaut
-                        className={classes.image}
-                        style={{
-                            opacity: currentIndex === index ? 1 : 0.5,
-                        }}
-                    />
-                ))}
-            </Box>
-            <Slider
-                className={classes.slider}
-                value={currentIndex}
-                min={0}
-                max={images.length - 1}
-                onChange={handleSliderChange}
-            />
-        </Box>
-    );
-};
+        <div className="scroll-container">
 
+                {images.map((image, index) => (
+                        <img src={image.src} alt={image.alt} />
+
+                ))}
+        </div>
+
+    );
+
+
+}
 export default ImageDiaporama;

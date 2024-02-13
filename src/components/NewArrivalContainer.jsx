@@ -22,11 +22,6 @@ const Item = styled(Paper)(({ theme }) => ({
 function NewArrivalContainer() {
     return (
         <>
-            <Container sx={{display: { xs: 'flex', md: 'none' }}}>
-                <video width="100%" height="100%" autoPlay loop muted>
-                    <source src="../public/asset/diaporama/slideVideo.mp4" type="video/mp4" />
-                </video>
-            </Container>
             <Grid container spacing={2} sx={{display: { xs: 'none', md: 'flex' }}}>
                 <Grid item xs={12} sm={6} order={{ xs: 1, sm: 2 }} >
                     <Item elevation={0}>

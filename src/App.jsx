@@ -5,6 +5,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NewArrivalContainer from "./components/NewArrivalContainer.jsx";
 import Images from "./components/Images.jsx";
 import ImageDiaporama from "./components/ImageDiaporama.jsx";
+import Container from "@mui/material/Container";
+import HomeImage from "./components/HomeImage.jsx";
 
 
 
@@ -17,7 +19,7 @@ function App() {
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
             <Header />
-            <NewArrivalContainer />
+            <HomeImage />
             <br />
             <div style={{
                 marginLeft: '1.5em',
@@ -39,6 +41,8 @@ function App() {
             </div>
             <br/>
             {/*<Images />*/}
+            <NewArrivalContainer />
+
         </ThemeProvider>
     </>
   )

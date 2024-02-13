@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import SendIcon from '@mui/icons-material/Send';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import {NavigateNext} from "@mui/icons-material";
+import Container from "@mui/material/Container";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -21,8 +22,13 @@ const Item = styled(Paper)(({ theme }) => ({
 function NewArrivalContainer() {
     return (
         <>
-            <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} order={{ xs: 1, sm: 2 }}>
+            <Container sx={{display: { xs: 'flex', md: 'none' }}}>
+                <video width="100%" height="100%" autoPlay loop muted>
+                    <source src="../public/asset/diaporama/slideVideo.mp4" type="video/mp4" />
+                </video>
+            </Container>
+            <Grid container spacing={2} sx={{display: { xs: 'none', md: 'flex' }}}>
+                <Grid item xs={12} sm={6} order={{ xs: 1, sm: 2 }} >
                     <Item elevation={0}>
                         <Stack
                             spacing={2}
@@ -34,13 +40,13 @@ function NewArrivalContainer() {
                                 Notre nouvelle collection inédite
                             </Typography>
                             <Typography variant="h1" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: '#3b3b3b' }}>
-                                Découvrez nos  <br/> nouveautés sur
-                                <div style={{ color: '#64b5f6', letterSpacing: '.1em', fontSize: '0.9em' }}>
+                                Tous vos  <br/> besoins sur
+                                <div style={{ color: '#64b5f6', letterSpacing: '.1em', fontSize: '0.7em' }}>
                                     IT<span style={{ color: '#1976d2' }}>.</span>SN <span style={{ color: '#1976d2' }}>~</span>Vente
                                 </div>
                             </Typography>
                             <Typography variant="h6" component="div" sx={{ pl: 10, pr: 10, textAlign: 'center' }}>
-                                Découvrez des arrivées de chaussures élégantes, un confort de qualité et de l'innovation pour votre vie active.
+                                Découvrez nos arrivées de produits élégants, un confort de qualité et de l'innovation pour votre vie active.
                             </Typography>
                             <Typography>
                                 <Button

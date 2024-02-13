@@ -17,8 +17,27 @@ function App() {
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
             <Header />
-            <ImageDiaporama />
             <NewArrivalContainer />
+            <br />
+            <div style={{
+                marginLeft: '1.5em',
+                fontSize: '2rem',
+                fontWeight: 500,
+                letterSpacing: '.1rem',
+            }}>
+                En ce moment
+            </div>
+            <ImageDiaporama />
+            <br />
+            <div style={{
+                marginLeft: '1.5em',
+                fontSize: '2rem',
+                fontWeight: 500,
+                letterSpacing: '.1rem',
+            }}>
+                Produits phares du moment
+            </div>
+            <br/>
             {/*<Images />*/}
         </ThemeProvider>
     </>

@@ -42,31 +42,33 @@
     margin-top: 1em;
 }
 
-/* Media query pour les écrans de taille moyenne (par exemple, tablettes) */
+/*
+!* Media query pour les écrans de taille moyenne (par exemple, tablettes) *!
 @media only screen and (max-width: 1024px) {
     .newArrivalImageContainer {
-        width: 100%; /* Ajustez la largeur selon vos besoins */
-        height: 50vh; /* Ajustez la hauteur pour conserver le ratio */
+        width: 90%; !* Ajustez la largeur selon vos besoins *!
+        height: 50vh; !* Ajustez la hauteur pour conserver le ratio *!
     }
 
     .newArrivalImage {
-        width: 10em; /* Ajustez la largeur selon vos besoins */
-        margin-top: 15%; /* Ajustez la marge selon vos besoins */
+        width: 10em; !* Ajustez la largeur selon vos besoins *!
+        margin-top: 15%; !* Ajustez la marge selon vos besoins *!
     }
 }
 
-/* Media query pour les écrans plus petits (par exemple, smartphones) */
+!* Media query pour les écrans plus petits (par exemple, smartphones) *!
 @media only screen and (max-width: 768px) {
     .newArrivalImageContainer {
-        width: 100%; /* Ajustez la largeur selon vos besoins */
-        height: 60vh; /* Ajustez la hauteur pour conserver le ratio */
+        width: 100%; !* Ajustez la largeur selon vos besoins *!
+        height: 60vh; !* Ajustez la hauteur pour conserver le ratio *!
     }
 
     .newArrivalImage {
-        width: 65%; /* Ajustez la largeur selon vos besoins */
-        margin-top: 7%; /* Ajustez la marge selon vos besoins */
+        width: 65%; !* Ajustez la largeur selon vos besoins *!
+        margin-top: 7%; !* Ajustez la marge selon vos besoins *!
     }
 
 
 }
 
+*/

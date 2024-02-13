@@ -6,10 +6,21 @@ div.scroll-container {
     margin: 2em 3em;
 }
 
+div.scroll-container div {
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
 div.scroll-container img {
     padding-right: 0.7em;
     height: 40em;
     width: 30em;
+}
+
+.description{
+    font-size: 1.5em;
+    font-weight: 400;
 }
 
 

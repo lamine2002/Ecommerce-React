@@ -1,5 +1,10 @@
+import useProduct from "./useProduct.jsx";
+
 function ProductDetails({id}) {
-    const product = useProduct(id);
+    const {product, error, loading} = useProduct(id);
+    if (error) return <p>Une erreur de réseau a été rencontrée</p>;
+    if (loading) return <p>Chargement...</p>;
+
   return (
     <div>
       <h1>{product.name}</h1>

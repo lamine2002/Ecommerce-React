@@ -7,3 +7,5 @@ function useProduct(id) {
     return { product, error, loading };
 
 }
+
+export default useProduct;

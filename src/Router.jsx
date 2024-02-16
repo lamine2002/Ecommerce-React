@@ -9,6 +9,14 @@ const Router = () => {
             element: <App />,
             // errorElement: <ErrorPage />,
         },
+        {
+            path: "/products",
+            element: <App />,
+        },
+        {
+            path: "/aboutUs",
+            element: <App />,
+        },
 
     ]);
 

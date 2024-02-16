@@ -16,9 +16,14 @@ import {useState} from "react";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuForSmallScreen from "./MenuForSmallScreen.jsx";
 import Badge from '@mui/material/Badge';
+import {Link} from "react-router-dom";
 
 
-const pages = ['home', 'Products', 'About Us'];
+const pages = [
+    { name: 'Home', href: '/' },
+    { name: 'Produits', href: '/products'},
+    { name: 'A Propos de Nous', href: '/aboutUs' },
+];
 function Header() {
 
 
@@ -32,7 +37,6 @@ function Header() {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="#app-bar-with-responsive-menu"
                         sx={{
                             mr: 2,
                             letterSpacing: '.1rem',
@@ -41,20 +45,23 @@ function Header() {
                             textDecoration: 'none',
                         }}
                     >
-                        IT<span style={{color: '#1976d2'}}>.</span>SN <span style={{color: '#1976d2'}}>~</span>Vente
+                        <Link to={"/"} style={{textDecoration: 'none'}}>
+                            <span style={{color: '#64b5f6'}}>IT</span><span style={{color: '#1976d2'}}>.</span><span style={{color: '#64b5f6'}}>SN</span> <span style={{color: '#1976d2'}}>~</span><span style={{color: '#64b5f6'}}>Vente</span>
+                        </Link>
                     </Typography>
 
                     {/* Modification du style de la boîte contenant les boutons */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} ml={30}>
                         {/*// xs: 'none' pour cacher les boutons sur les petits écrans, md: 'flex' pour afficher les boutons sur les écrans moyens, ml={30} pour ajouter une marge à gauche, flexGrow: 1 pour que la boîte s'étende sur toute la largeur disponible*/}
-                        {pages.map((page) => (
+                        {pages.map((page,index) => (
+
                             <Button
-                                key={page}
-                                variant="text"
+                                key={index}
+                                component={Link}
+                                to={page.href}
                                 sx={{ color: 'inherit', fontWeight: 400, ml:7, fontSize: '1.1rem'}}
-                                href={`${page.split(" ").join("").toLowerCase()}`}
                             >
-                                {page}
+                                {page.name}
                             </Button>
                         ))}
                     </Box>

@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import Products from "./components/Products.jsx";
 
 
 const Router = () => {
@@ -11,11 +12,11 @@ const Router = () => {
         },
         {
             path: "/products",
-            element: <App />,
+            element: <Products />,
         },
         {
             path: '/products/:id',
-            element: <App />,
+            element: <Products />,
         },
         {
             path: "/aboutUs",

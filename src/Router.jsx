@@ -13,7 +13,10 @@ const Router = () => {
             path: "/products",
             element: <App />,
         },
-
+        {
+            path: '/products/:id',
+            element: <App />,
+        },
         {
             path: "/aboutUs",
             element: <App />,

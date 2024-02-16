@@ -4,6 +4,7 @@ div.scroll-container {
     overflow-y: hidden ;
     white-space: nowrap;
     margin: 2em 3em;
+    scrollbar-width: thin;
 }
 
 div.scroll-container div {

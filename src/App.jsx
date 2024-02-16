@@ -9,6 +9,8 @@ import Container from "@mui/material/Container";
 import HomeImage from "./components/HomeImage.jsx";
 import Delivery from "./components/Delivery.jsx";
 import FeaturedProducts from "./components/FeaturedProducts.jsx";
+import Button from "@mui/material/Button";
+import {NavigateNext} from "@mui/icons-material";
 
 
 
@@ -23,6 +25,26 @@ function App() {
             <Delivery />
             <Header />
             <HomeImage />
+            <div>
+                <h1 style={{
+                    fontSize: '4rem',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    textTransform: 'uppercase',
+                    fontFamily: 'Roboto, sans-serif',
+                }}>
+                    Découvrez nos produits
+                </h1>
+                <Button
+                    variant="contained"
+                    endIcon={<NavigateNext sx={{ backgroundColor: '#fff', color: '#000', borderRadius: 10 }} />}
+                    sx={{ height: '3em', fontSize: '1em', mt: -5, borderRadius: 5, backgroundColor: '#000', alignContent: 'center', marginLeft: '50%', transform: 'translateX(-50%)'}}
+                >
+                    Voir maintenant
+                </Button>
+
+            </div>
+
             <br />
             <div style={{
                 marginLeft: '1.5em',
@@ -45,7 +67,7 @@ function App() {
             </div>
             <br/>
             <FeaturedProducts />
-            {/*<Images />*/}
+            <Images />
             <NewArrivalContainer />
 
         </ThemeProvider>

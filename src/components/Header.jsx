@@ -24,10 +24,10 @@ function Header() {
 
     return (
 
-        <AppBar position="static" sx={{backgroundColor: 'white', color: '#64b5f6'}} elevation={0}>
+        <AppBar position="static" sx={{backgroundColor: 'white', color: '#000'}} elevation={0}>
             <Container maxWidth="xl" >
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ mr: 1 }} />
+                    <AdbIcon sx={{ mr: 1, color: '#64b5f6'}} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -37,7 +37,7 @@ function Header() {
                             mr: 2,
                             letterSpacing: '.1rem',
                             fontSize: '1.5rem',
-                            color: 'inherit',
+                            color: '#64b5f6',
                             textDecoration: 'none',
                         }}
                     >
@@ -61,8 +61,8 @@ function Header() {
 
                     <Tooltip title="Shopping Cart" arrow sx={{ ml: 'auto' }}>
                         <IconButton size="large" edge="end" color="inherit" aria-label="menu">
-                            <Badge badgeContent={2} color="info" >
-                                <ShoppingCartIcon sx={{ fontSize: '2rem' }}/>
+                            <Badge badgeContent={2} color="inherit" >
+                                <ShoppingCartIcon sx={{ fontSize: '2rem'}}/>
                             </Badge>
                         </IconButton>
                     </Tooltip>

@@ -7,6 +7,7 @@ import Images from "./components/Images.jsx";
 import ImageDiaporama from "./components/ImageDiaporama.jsx";
 import Container from "@mui/material/Container";
 import HomeImage from "./components/HomeImage.jsx";
+import Delivery from "./components/Delivery.jsx";
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <>
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
+            <Delivery />
             <Header />
             <HomeImage />
             <br />
@@ -32,10 +34,11 @@ function App() {
             <ImageDiaporama />
             <br />
             <div style={{
-                marginLeft: '1.5em',
-                fontSize: '2rem',
+                marginLeft: '2em',
+                fontSize: '1.5rem',
                 fontWeight: 500,
-                letterSpacing: '.1rem',
+
+                // letterSpacing: '.1rem',
             }}>
                 Produits phares du moment
             </div>

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import useImage from "./useImage.jsx";
+import Grid from "@mui/material/Grid";
+import {Card, CardMedia} from "@mui/material";
 
 
 const Images = () => {
@@ -24,6 +26,26 @@ const Images = () => {
                     );
                 })}
             </ul>
+
+            <div style={{width: '94%', display: 'flex', justifyContent: 'space-around', marginBottom: '2em'}}>
+                <Grid container spacing={1} className="FeaturedProducts" justifyContent="space-around" >
+                    {cards.map((card, index) => (
+                        <Grid item key={index} xs={2} sm={2} >
+                            <Card sx={{width: '150%'}}>
+                                <CardMedia
+                                    component="div"
+                                    sx={{
+                                        // Rapport d'aspect 16:9
+                                        // pt: '50%',
+                                        height: '300px',
+                                    }}
+                                    image={card.image}
+                                />
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+            </div>
         </>
     );
 };

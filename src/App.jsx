@@ -8,6 +8,7 @@ import ImageDiaporama from "./components/ImageDiaporama.jsx";
 import Container from "@mui/material/Container";
 import HomeImage from "./components/HomeImage.jsx";
 import Delivery from "./components/Delivery.jsx";
+import FeaturedProducts from "./components/FeaturedProducts.jsx";
 
 
 
@@ -43,6 +44,7 @@ function App() {
                 Produits phares du moment
             </div>
             <br/>
+            <FeaturedProducts />
             {/*<Images />*/}
             <NewArrivalContainer />
 

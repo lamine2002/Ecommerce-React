@@ -8,6 +8,7 @@ import * as React from "react";
 import NewArrival from "./NewArrival.jsx";
 import {styled} from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import ReactImageMagnify from 'react-image-magnify';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -22,22 +23,22 @@ function ProductDetails({id}) {
     if (loading) return <CircularProgress />;
 
   return (
-      <Grid container spacing={2} alignItems={'center'} mt={2} > {/* Ajoutez justifyContent="center" ici */}
+      <Grid container spacing={2}  p={10} mb={5} > {/* Ajoutez justifyContent="center" ici */}
           <Grid item xs={12} sm={6} order={{ xs: 2, sm: 2 }}>
-              <Item elevation={0}>
+              <Item elevation={0} >
                   <Stack
                       spacing={2}
                       direction="column"
-                      sx={{ mt: 10, textAlign: 'center' }}  // Ajustez le style pour le centrage sur les petits écrans
+                      sx={{ mt: 5, textAlign: 'left', width: 500, maxWidth:'100%'}}  // Ajustez le style pour le centrage sur les petits écrans
                   >
                         {/* Vos éléments restent inchangés */}
                         <Typography variant="h4" component="h1" gutterBottom color={'#64b5f6'}>
                             {product.title}
                         </Typography>
-                        <Typography variant="h4" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: '#3b3b3b' }}>
+                        <Typography variant="h5" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: '#3b3b3b' }}>
                             {product.price}  FCFA
                         </Typography>
-                        <Typography variant="h6" component="div" sx={{ pl: 10, pr: 10, textAlign: 'center' }}>
+                        <Typography variant="h6" component="div" >
                             {product.description}
                         </Typography>
 
@@ -47,7 +48,44 @@ function ProductDetails({id}) {
 
           <Grid item xs={12} sm={6} order={{ xs: 1, sm: 1 }}>
               <Item elevation={0} >
-                  <img src={product.image} style={{width: '45em', height: "40em"}}/>
+                 <Typography sx={{display: { xs: 'none', md: 'flex' }}}>
+                     <div >
+                         <ReactImageMagnify {...{
+                             smallImage: {
+                                 alt: product.title,
+                                 isFluidWidth: false,
+                                 width: 600,
+                                 height: 600,
+                                 src: product.image,
+
+                             },
+
+                             largeImage: {
+                                 src: product.image,
+                                 width: 1200,
+                                 height: 1800
+                             }
+                         }} />
+                     </div>
+                 </Typography>
+                  <Typography sx={{display: { xs: 'flex', md: 'none' }}}>
+                      <div style={{ maxWidth: '100%', height: 'auto' }}>
+                          <ReactImageMagnify {...{
+                              smallImage: {
+                                  alt: product.title,
+                                  style: { width: '600px', height: '600px' },
+                                  isFluidWidth: true,
+                                  src: product.image,
+
+                              },
+                              largeImage: {
+                                  src: product.image,
+                                  width: 1200,
+                                  height: 1800
+                              }
+                          }} />
+                      </div>
+                  </Typography>
 
               </Item>
           </Grid>

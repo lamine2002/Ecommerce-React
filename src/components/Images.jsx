@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import useImage from "./useImage.jsx";
 import Grid from "@mui/material/Grid";
-import {Card, CardMedia} from "@mui/material";
+import {Card, CardMedia, CircularProgress} from "@mui/material";
+import * as React from "react";
 
 
 const Images = () => {
     const { images, error, loading } = useImage();
 
     if (error) return <p>A network error was encountered</p>;
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <CircularProgress />;
     console.log(images);
     return (
         <>

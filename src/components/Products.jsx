@@ -5,6 +5,7 @@ import * as React from "react";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ProductDetails from "./ProductDetails.jsx";
+import Images from "./Images.jsx";
 
 const defaultTheme = createTheme();
 function Products() {
@@ -14,7 +15,7 @@ function Products() {
             <CssBaseline />
             <Delivery />
             <Header />
-            {!id && <h1 style={{
+            {!id && <div><h1 style={{
                 fontSize: '4rem',
                 fontWeight: 'bold',
                 textAlign: 'center',
@@ -23,6 +24,8 @@ function Products() {
             }}>
                 Découvrez nos produits
             </h1>
+                <Images />
+            </div>
             }
             {id && <ProductDetails id={parseInt(id)} />}
         </ThemeProvider>

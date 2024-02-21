@@ -11,6 +11,7 @@ import SendIcon from '@mui/icons-material/Send';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import {NavigateNext} from "@mui/icons-material";
 import Container from "@mui/material/Container";
+import {Link} from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -44,13 +45,15 @@ function NewArrivalContainer() {
                                 Découvrez nos arrivées de produits élégants, un confort de qualité et de l'innovation pour votre vie active.
                             </Typography>
                             <Typography>
-                                <Button
-                                    variant="contained"
-                                    endIcon={<NavigateNext sx={{ backgroundColor: '#fff', color: '#64b5f6', borderRadius: 10 }} />}
-                                    sx={{ width: '40%', height: '3em', fontSize: '1em', mt: 2, borderRadius: 5, backgroundColor: '#64b5f6' }}
-                                >
-                                    Voir maintenant
-                                </Button>
+                                <Link to={'/products'}>
+                                    <Button
+                                        variant="contained"
+                                        endIcon={<NavigateNext sx={{ backgroundColor: '#fff', color: '#64b5f6', borderRadius: 10 }} />}
+                                        sx={{ width: '40%', height: '3em', fontSize: '1em', mt: 2, borderRadius: 5, backgroundColor: '#64b5f6' }}
+                                    >
+                                        Voir maintenant
+                                    </Button>
+                                </Link>
                             </Typography>
                         </Stack>
                     </Item>

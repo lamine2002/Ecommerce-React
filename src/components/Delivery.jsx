@@ -11,8 +11,11 @@ function Delivery() {
             fontSize: "1.1em",
             fontWeight: 500,
             letterSpacing: ".1em",
+            // paddingTop: "1em",
         }}>
-            Livraison gratuite a partir de 50.000FCFA et retour gratuit
+            <div>
+                <span style={{color: "black"}}>Livraison gratuite à partir de 50 000 FCFA d'achat</span>
+            </div>
         </div>
     )
 }

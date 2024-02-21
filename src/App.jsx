@@ -67,7 +67,6 @@ function App() {
             </div>
             <br/>
             <FeaturedProducts />
-            <Images />
             <NewArrivalContainer />
 
         </ThemeProvider>

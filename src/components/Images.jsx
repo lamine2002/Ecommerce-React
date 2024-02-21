@@ -6,6 +6,15 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
 
+// Ajoutez cette classe CSS pour l'effet de zoom
+const styles = {
+    zoomOnHover: {
+        transition: 'transform 0.2s',
+        '&:hover': {
+            transform: 'scale(1.1)', // Changer la valeur pour ajuster le niveau de zoom
+        },
+    },
+};
 const Images = () => {
     const { images, error, loading } = useImage();
 
@@ -36,14 +45,13 @@ const Images = () => {
                                     <Card>
                                         <CardMedia
                                             component="img"
-
                                             sx={{
+                                                ...styles.zoomOnHover, // Appliquer l'effet de zoom au survol
                                                 objectFit: 'contain',
                                                 maxHeight: 433,
-                                                '@media (max-width: 600px)' : {
+                                                '@media (max-width: 600px)': {
                                                     maxHeight: 323
                                                 }
-
                                             }}
                                             image={image.image}
                                             alt={image.title}

@@ -3,7 +3,7 @@ import {CircularProgress, Stack} from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import {NavigateNext} from "@mui/icons-material";
+import {AddShoppingCart, ArrowBack, NavigateNext} from "@mui/icons-material";
 import * as React from "react";
 import NewArrival from "./NewArrival.jsx";
 import {styled} from "@mui/material/styles";
@@ -20,7 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function ProductDetails({id}) {
     const {product, error, loading} = useProduct(id);
     if (error) return <p>Une erreur de réseau a été rencontrée</p>;
-    if (loading) return <CircularProgress />;
+    if (loading) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}><CircularProgress /></div>;
 
   return (
       <Grid container spacing={2}  p={10} mb={5} > {/* Ajoutez justifyContent="center" ici */}
@@ -41,6 +41,16 @@ function ProductDetails({id}) {
                         <Typography variant="h6" component="div" >
                             {product.description}
                         </Typography>
+
+                        <Stack direction="row" spacing={2} justifyContent="flex-start">
+                                <Button variant="outlined" color="primary" startIcon={<ArrowBack />}>
+                                Retour
+                            </Button>
+                            <Button variant="contained" color="primary" endIcon={<AddShoppingCart />}>
+                                Ajouter au panier
+                            </Button>
+
+                        </Stack>
 
                   </Stack>
               </Item>

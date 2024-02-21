@@ -5,6 +5,7 @@ import {Card, CardMedia, CircularProgress} from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
+import * as React from "react";
 
 // Ajoutez cette classe CSS pour l'effet de zoom
 const styles = {
@@ -19,7 +20,7 @@ const Images = () => {
     const { images, error, loading } = useImage();
 
     if (error) return <p>A network error was encountered</p>;
-    if (loading) return <CircularProgress />;
+    if (loading) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}><CircularProgress /></div>;
     console.log(images);
     return (
         <>

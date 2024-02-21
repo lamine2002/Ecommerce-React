@@ -6,6 +6,7 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ProductDetails from "./ProductDetails.jsx";
 import Images from "./Images.jsx";
+import Footer from "./Footer.jsx";
 
 const defaultTheme = createTheme();
 function Products() {
@@ -15,6 +16,7 @@ function Products() {
             <CssBaseline />
             <Delivery />
             <Header />
+
             {!id && <div><h1 style={{
                 fontSize: '4rem',
                 fontWeight: 'bold',
@@ -28,7 +30,9 @@ function Products() {
             </div>
             }
             {id && <ProductDetails id={parseInt(id)} />}
+            <Footer />
         </ThemeProvider>
+
     );
 }
 

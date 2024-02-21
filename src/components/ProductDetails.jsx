@@ -9,6 +9,7 @@ import NewArrival from "./NewArrival.jsx";
 import {styled} from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import ReactImageMagnify from 'react-image-magnify';
+import {Link} from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -43,9 +44,11 @@ function ProductDetails({id}) {
                         </Typography>
 
                         <Stack direction="row" spacing={2} justifyContent="flex-start">
-                                <Button variant="outlined" color="primary" startIcon={<ArrowBack />}>
-                                Retour
-                            </Button>
+                              <Link to={'/products'} style={{textDecoration: 'none', color: '#000'}}>
+                                  <Button variant="outlined" color="primary" startIcon={<ArrowBack />}>
+                                      Retour
+                                  </Button>
+                              </Link>
                             <Button variant="contained" color="primary" endIcon={<AddShoppingCart />}>
                                 Ajouter au panier
                             </Button>

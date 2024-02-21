@@ -26,8 +26,12 @@ const Footer = () => {
             <Container maxWidth={false} sx={{ backgroundColor: "#2f2f2f", color:"#fff"}}>
                 <Grid container spacing={2} justifyContent="space-between">
                     <Grid item xs={12} sm={6} md={3}>
-                        <Typography variant="h6" color="#64b5f6" gutterBottom >
-                            Brand Name
+                        <Typography variant="h4" component="h1" color="#64b5f6" gutterBottom sx={{marginTop: '20%',
+                            '@media (max-width: 600px)': {
+                                marginTop: '0',
+                            }
+                        }}>
+                            IT.SN~VENTES
                         </Typography>
                         {/* Add your logo component or image here */}
                     </Grid>

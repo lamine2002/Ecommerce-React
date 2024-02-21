@@ -11,6 +11,7 @@ import Delivery from "./components/Delivery.jsx";
 import FeaturedProducts from "./components/FeaturedProducts.jsx";
 import Button from "@mui/material/Button";
 import {NavigateNext} from "@mui/icons-material";
+import Footer from "./components/Footer.jsx";
 
 
 
@@ -68,7 +69,9 @@ function App() {
             <br/>
             <FeaturedProducts />
             <NewArrivalContainer />
-
+            <br/>
+            <br/>
+        <Footer />
         </ThemeProvider>
     </>
   )

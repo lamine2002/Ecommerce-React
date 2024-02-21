@@ -12,6 +12,7 @@ import FeaturedProducts from "./components/FeaturedProducts.jsx";
 import Button from "@mui/material/Button";
 import {NavigateNext} from "@mui/icons-material";
 import Footer from "./components/Footer.jsx";
+import {Link} from "react-router-dom";
 
 
 
@@ -36,13 +37,15 @@ function App() {
                 }}>
                     Découvrez nos produits
                 </h1>
-                <Button
-                    variant="contained"
-                    endIcon={<NavigateNext sx={{ backgroundColor: '#fff', color: '#000', borderRadius: 10 }} />}
-                    sx={{ height: '3em', fontSize: '1em', mt: -5, borderRadius: 5, backgroundColor: '#000', alignContent: 'center', marginLeft: '50%', transform: 'translateX(-50%)'}}
-                >
-                    Voir maintenant
-                </Button>
+                <Link to={'/products'}>
+                    <Button
+                        variant="contained"
+                        endIcon={<NavigateNext sx={{ backgroundColor: '#fff', color: '#000', borderRadius: 10 }} />}
+                        sx={{ height: '3em', fontSize: '1em', mt: -5, borderRadius: 5, backgroundColor: '#000', alignContent: 'center', marginLeft: '50%', transform: 'translateX(-50%)'}}
+                    >
+                        Voir maintenant
+                    </Button>
+                </Link>
 
             </div>
 

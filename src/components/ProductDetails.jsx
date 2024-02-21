@@ -36,7 +36,7 @@ function ProductDetails({id}) {
                             {product.title}
                         </Typography>
                         <Typography variant="h5" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: '#3b3b3b' }}>
-                            {product.price}  FCFA
+                            {(product.price * 500).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} FCFA
                         </Typography>
                         <Typography variant="h6" component="div" >
                             {product.description}

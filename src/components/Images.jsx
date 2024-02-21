@@ -57,15 +57,26 @@ const Images = () => {
                                             alt={image.title}
                                         />
                                     </Card>
-                                    <Typography variant="h5" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: '#3b3b3b' }}>
+                                    <Typography variant="h6" component="h1" sx={{
+                                            fontWeight: 'bold',
+                                            color: '#3b3b3b',
+                                            marginTop: '0.5em',
+                                            fontSize: '1.1rem',
+                                            letterSpacing: '.1rem'
+                                        }}>
+                                        {image.title}
+                                    </Typography>
+                                    <Typography variant="h6" component="h1" gutterBottom sx={{
+                                        fontWeight: 'bold',
+                                        color: '#3b3b3b',
+                                        fontSize: '1rem'
+                                    }}>
                                         {/*// faire un separateur de milliers*/}
                                         {(image.price * 500).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} FCFA
                                         {/*{(image.price * 500).toLocaleString().replace(" ", '.')} FCFA*/}
 
                                     </Typography>
-                                    <Typography variant="h6" component="div" >
-                                        {image.title}
-                                    </Typography>
+
                                 </Link>
                             </Grid>
                         );

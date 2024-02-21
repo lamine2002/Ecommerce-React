@@ -15,6 +15,7 @@ import IconButton from "@mui/material/IconButton";
 import HomeIcon from '@mui/icons-material/Home';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import InfoIcon from '@mui/icons-material/Info';
+import {Link} from "react-router-dom";
 
 export default function MenuForSmallScreen() {
     const [state, setState] = React.useState({
@@ -37,16 +38,25 @@ export default function MenuForSmallScreen() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {['HOME', 'PRODUCTS', 'ABOUT US'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton href={`${text.split(" ").join("").toLowerCase()}`}>
+                {[
+                    { name: 'Home', href: '/' },
+                    { name: 'Produits', href: '/products'},
+                    { name: 'A Propos de Nous', href: '/aboutUs' },
+                ].map((text, index) => (
+                    <Link to={text.href}
+                            style={{textDecoration: 'none', color: 'black'}}
+                            key={index}
+                    >
+                        <ListItem key={index} disablePadding>
+                            <ListItemButton>
 
-                            <ListItemIcon>
-                                {index === 0 ? <HomeIcon /> : index === 1 ? <InventoryIcon /> : <InfoIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
+                                <ListItemIcon>
+                                    {index === 0 ? <HomeIcon /> : index === 1 ? <InventoryIcon /> : <InfoIcon />}
+                                </ListItemIcon>
+                                <ListItemText primary={text.name} />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
         </Box>

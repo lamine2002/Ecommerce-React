@@ -16,9 +16,10 @@ import HomeIcon from '@mui/icons-material/Home';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import InfoIcon from '@mui/icons-material/Info';
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
 export default function MenuForSmallScreen() {
-    const [state, setState] = React.useState({
+    const [state, setState] = useState({
         right: false,
     });
 

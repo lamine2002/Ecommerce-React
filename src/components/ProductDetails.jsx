@@ -10,6 +10,7 @@ import {styled} from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import ReactImageMagnify from 'react-image-magnify';
 import {Link} from "react-router-dom";
+import addToCart from "./addToCart.jsx";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -49,7 +50,7 @@ function ProductDetails({id}) {
                                       Retour
                                   </Button>
                               </Link>
-                            <Button variant="contained" color="primary" endIcon={<AddShoppingCart />}>
+                            <Button onClick={() => addToCart(product)} variant="contained" color="primary" endIcon={<AddShoppingCart />}>
                                 Ajouter au panier
                             </Button>
 

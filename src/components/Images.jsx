@@ -21,7 +21,7 @@ const Images = () => {
 
     if (error) return <p>A network error was encountered</p>;
     if (loading) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}><CircularProgress /></div>;
-    console.log(images);
+    // console.log(images);
     return (
         <>
 

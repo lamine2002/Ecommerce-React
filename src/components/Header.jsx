@@ -17,6 +17,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuForSmallScreen from "./MenuForSmallScreen.jsx";
 import Badge from '@mui/material/Badge';
 import {Link} from "react-router-dom";
+import Cart from "./Cart.jsx";
 
 
 const pages = [
@@ -66,13 +67,16 @@ function Header() {
                         ))}
                     </Box>
 
-                    <Tooltip title="Shopping Cart" arrow sx={{ ml: 'auto' }}>
-                        <IconButton size="large" edge="end" color="inherit" aria-label="menu">
-                            <Badge badgeContent={2} color="inherit" >
-                                <ShoppingCartIcon sx={{ fontSize: '2rem'}}/>
-                            </Badge>
-                        </IconButton>
-                    </Tooltip>
+                    <Box sx={{ display: { xs: 'flex', }, ml: 'auto' }}>
+                        <Tooltip title="Shopping Cart" arrow sx={{ ml: 'auto' }}>
+                            {/*<IconButton size="large" edge="end" color="inherit" aria-label="menu">
+                                <Badge badgeContent={2} color="inherit" >
+                                    <ShoppingCartIcon sx={{ fontSize: '2rem'}}/>
+                                </Badge>
+                            </IconButton>*/}
+                            <Cart />
+                        </Tooltip>
+                    </Box>
 
                     {/*// pour les petits écrans creer un drawer*/}
                     <Box sx={{ display: { xs: 'flex', md: 'none' }, }}>

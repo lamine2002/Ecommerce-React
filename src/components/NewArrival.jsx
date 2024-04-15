@@ -6,21 +6,21 @@ import { useState } from "react";
 const itemsList = [
     {
         backgroundColor: '#b2dfdb',
-        imageUrl: '../public/asset/chaussure1.png',
+        imageUrl: '/asset/chaussure1.png',
         border: '#64b5f6 2px solid',
         width:'200px',
         height: '200px',
     },
     {
         backgroundColor: '#ffcc80',
-        imageUrl: '../public/asset/chaussure2.png',
+        imageUrl: '/asset/chaussure2.png',
         border: 'none',
         width:'200px',
         height: '200px',
     },
     {
         backgroundColor: '#b39ddb',
-        imageUrl: '../public/asset/chaussure3.png',
+        imageUrl: '/asset/chaussure3.png',
         border: 'none',
         width:'200px',
         height: '200px',

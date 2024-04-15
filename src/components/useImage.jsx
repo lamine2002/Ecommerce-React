@@ -25,7 +25,7 @@ const useImage = () => {
             price:'200',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit. 1',
-            image:'../public/asset/chaussureAdidas1.png'
+            image:'/asset/chaussureAdidas1.png'
         },
         {
             id:22,
@@ -33,7 +33,7 @@ const useImage = () => {
             price:'200',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit. 2',
-            image:'../public/asset/chaussureAdidas2.png'
+            image:'/asset/chaussureAdidas2.png'
         },
         {
             id:23,
@@ -41,7 +41,7 @@ const useImage = () => {
             price:'200',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit. 3',
-            image:'../public/asset/chaussureAdidas3.png'
+            image:'/asset/chaussureAdidas3.png'
         },
         {
             id:24,
@@ -49,7 +49,7 @@ const useImage = () => {
             price:'200',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit. 4',
-            image:'../public/asset/chaussureAdidas4.png'
+            image:'/asset/chaussureAdidas4.png'
         },
         {
             id:25,
@@ -57,7 +57,7 @@ const useImage = () => {
             price:'200',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit. 5',
-            image:'../public/asset/chaussureAdidas5.png'
+            image:'/asset/chaussureAdidas5.png'
         },
         {
             id:26,
@@ -65,7 +65,7 @@ const useImage = () => {
             price:'200',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit. 6',
-            image:'../public/asset/chaussureAdidas6.png'
+            image:'/asset/chaussureAdidas6.png'
         },
         {
             id:27,
@@ -73,7 +73,7 @@ const useImage = () => {
             price:'200',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit. 7',
-            image:'../public/asset/chaussureAdidas7.png'
+            image:'/asset/chaussureAdidas7.png'
         },
         {
             id:28,
@@ -81,7 +81,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike1.jpg'
+            image:'/asset/chaussureNike1.jpg'
         },
         {
             id:29,
@@ -89,7 +89,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike2.jpg'
+            image:'/asset/chaussureNike2.jpg'
         },
         {
             id:30,
@@ -97,7 +97,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike3.jpg'
+            image:'/asset/chaussureNike3.jpg'
         },
         {
             id:31,
@@ -105,7 +105,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike4.jpg'
+            image:'/asset/chaussureNike4.jpg'
         },
         {
             id:32,
@@ -113,7 +113,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike5.jpg'
+            image:'/asset/chaussureNike5.jpg'
         },
         {
             id:33,
@@ -121,7 +121,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike6.jpg'
+            image:'/asset/chaussureNike6.jpg'
         },
         {
             id:34,
@@ -129,7 +129,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike7.jpg'
+            image:'/asset/chaussureNike7.jpg'
         },
         {
             id:35,
@@ -137,7 +137,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike8.jpg'
+            image:'/asset/chaussureNike8.jpg'
         },
         {
             id:36,
@@ -145,7 +145,7 @@ const useImage = () => {
             price:'300',
             category:'shoes',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis dicta molestias dolorum facilis delectus. Amet, quae! Rerum delectus dicta harum sit magni culpa voluptatum placeat modi blanditiis, possimus fugit.',
-            image:'../public/asset/chaussureNike9.jpg'
+            image:'/asset/chaussureNike9.jpg'
         },
 
     ]

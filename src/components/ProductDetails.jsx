@@ -10,7 +10,9 @@ import {styled} from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import ReactImageMagnify from 'react-image-magnify';
 import {Link} from "react-router-dom";
-import addToCart from "./addToCart.jsx";
+import useCart from "./useCart.jsx";
+import {useEffect} from "react";
+
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -21,6 +23,9 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 function ProductDetails({id}) {
     const {product, error, loading} = useProduct(id);
+    const { items, addToCart } = useCart();
+    // Ajouter cette ligne pour forcer une mise à jour du composant lorsque les items changent
+
     if (error) return <p>Une erreur de réseau a été rencontrée</p>;
     if (loading) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}><CircularProgress /></div>;
 

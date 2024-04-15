@@ -16,20 +16,26 @@ import HomeIcon from '@mui/icons-material/Home';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import InfoIcon from '@mui/icons-material/Info';
 import {Link} from "react-router-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart.js";
 import Grid from "@mui/material/Grid";
 import CloseIcon from '@mui/icons-material/Close';
-import { itemInCart, items} from "./addToCart.jsx";
+import useCart from "./useCart.jsx";
 
 
 export default function Cart() {
-
+    const { items, addToCart } = useCart();
 
     const [state, setState] = useState({
         right: false,
     });
+
+    const [cartItems, setCartItems] = useState(items);
+
+    useEffect(() => {
+        setCartItems(items);
+    }, [items]);
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -55,7 +61,7 @@ export default function Cart() {
             <List>
                 {/* Les produits du clients ici   */}
                 {/* Verifier si l'item n'est pas nul*/}
-                {items.length > 0 ? items.map((item, index) => (
+                {cartItems.length > 0 ? items.map((item, index) => (
                     <ListItem key={index} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
@@ -83,7 +89,7 @@ export default function Cart() {
                 aria-label="menu"
             >*/}
                 <IconButton  size="large" edge="end" color="inherit" aria-label="menu">
-                    <Badge onClick={toggleDrawer('right', true)} badgeContent={itemInCart} color="inherit" >
+                    <Badge onClick={toggleDrawer('right', true)} badgeContent={cartItems.length} color="inherit" >
                         <ShoppingCartIcon  sx={{ fontSize: '2rem'}}/>
                     </Badge>
                 </IconButton>
